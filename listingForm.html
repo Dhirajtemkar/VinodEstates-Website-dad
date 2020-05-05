@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listingsForm-VinodEstates</title>
+    <link rel="stylesheet" href="styles/listingForm.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+ 
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <div class="logo">
+            <a href="index.html"><span>V</span>inodRealities</a>
+        </div>
+        <!-- <a href="#"><div class="userL"><i class="far fa-user"></i></div></a> -->
+        <a href="listingForm.html" class="userL active"><i class="far fa-user"></i></a>
+        <br class="f">
+        <br class="f">
+        <a href="contact.html" class="navList">Contact</a>
+        <a href="#" class="navList">About</a>
+        <a href="exampleListings.html" class="navList">Listing</a>
+        <a href="index.html" class="navList">Home</a>    
+    
+        <a href="javascript:void(0);" style="font-size: 18px;" class="icon" onclick="myFunction()"> &#9776;</a>
+      </div>
+      <script src="js/responsiveNav.js"></script>
+
+    <div class="Wrapper">
+        <div class="listingHeading">
+            <h3>Create a new Listing</h3>
+        </div>
+        <form action="" class="listingForm" id="submitForm" name="listingForm">
+            
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Basic Details about the Property
+                    </button>
+                    </h2>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="BasicDetail">
+                
+                        <div class="firstTitle"><h3>Basic Details about the Property</h3></div>
+        
+                        <label class="label">Listing type:</label>
+                        <select id="listingType" name="listingType">
+                            <option value="Sell">Sell</option>
+                            <option value="Rent">Rent</option>
+                            <option value="PG">PG</option>
+                        </select> <br>
+                        <label class="label">Property Type:</label>
+                        <select id="propertyType" name="propertyType">
+                            <option value="Residential">Residential</option>
+                            <option value="Commercial">Commercial</option>
+                        </select> <br>
+                        <label class="label">Type of Apt:</label>
+                        <select id="AptType" name="AptType" >
+                            <option value="StudioApt">Studio Atp.</option>
+                            <option value="ResidentialApt">Residential Apt.</option>
+                            <option value="IndependentApt">Independent/Builder Floor</option>
+                            <option value="ServiceApt">Service Atp</option>
+                            <option value="OfficeApt">Office Space</option>
+                            <option value="RetailApt">Retail (Shop)</option>
+                            <option value="StorageApt">Storage (Ware House)</option>
+                        </select> <br>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+            <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Details about Location of the Property
+                </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="LocationDetail">
+                        <div class="partTitle"><h3>Details about Location of the Property</h3></div>
+                        <input type="text" id="CityAdd" name="CityAdd" placeholder="City">
+                        <input type="text" id="ProjectNameAdd" name="ProjectNameAdd" placeholder="Project/ building name">
+                        <input type="text" id="LocalityAdd" name="LocalityAdd" placeholder="Locality">
+                        <input type="text" id="HouseNoAdd" name="HouseNoAdd" placeholder="HouseNo./ Street name">  
+                        <input type="text" id="LandmarkAdd" name="LandmarkAdd" placeholder="Landmark">
+                    </div>        
+                </div>
+            </div>
+            </div>
+
+
+            <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Specifications about the Property
+                </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="PropertyDetail">
+
+                        <div class="partTitle"><h3>Specifications about the Property</h3></div>
+                        <div class="trio">
+                            <label class="label">Property Size:</label>
+                            <input type="text" name="Size" id="Size" placeholder="Example: 100"></text>
+                            <label for="Size">Sqft</label>
+                        </div>
+                        <div class="trio"> 
+                            <label class="label">Carpet Area:</label>
+                            <input type="text" name="CarpetSize" id="CarpetSize" placeholder="Example: 100"></text>
+                            <label for="CarpetSize">Sqft</label>
+                        </div>
+                         
+                        <label class="label">Bedrooms:</label>
+                        <input type="number" name="Bedrooms" id="Bedrooms" placeholder="example 0/1/2.."></text>
+                        <br>
+                        <label class="label">Bathrooms:</label>
+                        <input type="number" name="Bathrooms" id="Bathrooms" placeholder="example 0/1/2.."></text>
+                        <br>
+                        <label class="label">Balconies:</label>
+                        <input type="number" name="Balconies" id="Balconies" placeholder="example 0/1/2.."></text>
+                        <br>
+                        <div class="trio1">
+                            <h4 class="PropertyMid">Is Reserverd Parking Available?</h4>
+                            <input type="radio" id="ParkingYes" name="Parking" value="Yes">
+                            <label for="Yes">Yes</label>
+                            <input type="radio" id="ParkingNo" name="Parking" value="No">
+                            <label for="No">No</label><br>
+                        </div>
+                        <label class="label">Covered:</label>                        
+                        <input type="number" name="CoveredParkings" id="CoveredParkings" placeholder="example 0/1/2.."></text>
+                        <br>
+                        <label class="label">Open:</label>
+                        <input type="number" name="OpenParkings" id="OpenParkings" placeholder="example 0/1/2.."></text>
+                        <br>
+                        <label class="label">Property Status:</label>
+                        <input type="text" name="Type" id="Status" placeholder="ready to move-in/not"></text>
+                        <br>
+                        <label class="label">Furnishing:</label>
+                        <select id="FurnishingOption" name="FurnishingOption">
+                            <option value="Furnished">Furnished</option>
+                            <option value="Un-Furnished">Un-Furnished</option>
+                            <option value="SemiFurnished">SemiFurnished</option>
+                        </select>
+                    </div>        
+                </div>
+            </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Add Pricing Details about the Property
+                    </button>
+                </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="PaymentDetail">
+
+                        <div class="partTitle"><h3>Add Pricing Details about the Property</h3></div>
+        
+                        <label class="label">Ownership:</label>
+                        <select id="OwnershipOption" name="OwnershipOption">
+                            <option value="Freehold">Freehold</option>
+                            <option value="Leasehold">Leasehold</option>
+                            <option value="PowerofAttorney">Power of Attorney</option>
+                            <option value="Co-OperativeSociety">Co-Operative Society</option>
+                        </select>
+                        <label class="label">Price or Rate:</label>
+                        <input type="number" name="Rate" id="Rate" placeholder="Enter the value/amount"></text>
+                        <br>
+                        <h4 class="midHead">Check the Following if applicable:</h4>
+                        
+                        <h4 class="midHead1">1.  Is the price all Inclusive ?</h4>
+                        <input class="checkPrize" type="radio" id="AllInclusive" name="AllInclusive" value="yes">
+                        <label for="AllInclusive">Yes</label>
+                        <input class="checkPrize" type="radio" id="AllInclusive" name="AllInclusive" value="no">
+                        <label for="AllInclusive">No</label><br>
+                        
+                        <h4 class="midHead1">2.  Is the price Negotiable ?</h4>
+                        <input class="checkPrize" type="radio" id="Negotiable" name="Negotiable" value="Yes">
+                        <label for="Negotiable">Yes</label>
+                        <input class="checkPrize" type="radio" id="Negotiable" name="Negotiable" value="No">
+                        <label for="Negotiable">No</label><br>
+
+                        <h4 class="midHead1">3.  Does the Price include Tax & Goernment Charges ?</h4>
+                        <input class="checkPrize" type="radio" id="TaxAndCharge" name="TaxAndCharge" value="Yes">
+                        <label for="TaxAndCharge">Yes</label>
+                        <input class="checkPrize" type="radio" id="TaxAndCharge" name="TaxAndCharge" value="No">
+                        <label for="TaxAndCharge">No</label><br><br>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Add the Features about the Property
+                    </button>
+                </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="FeatureDetail">
+
+                        <div class="partTitle"><h3>Add the Features about the Property</h3></div>
+        
+                        <!-- @TODO Photo Upload system -->
+                        <div class="imageUploadTitle">Add images of the property</div>
+                        <div class="uploaderProgress"></div>
+                        <div class="imageUpload">
+                            <input type="file" id="imageUploader" name="imageUploader">
+                        </div>
+
+                        <h3 class="midHead">Amenities:</h3>
+                        <p class="helper">(Note: Check all those which are applicable.)</p>
+
+                        <h4 class="midHead1">1.  Is there lift ?</h4>
+                        <input class="checkPrize" type="radio" id="lift" name="lift" value="yes">
+                        <label for="lift">Yes</label>
+                        <input class="checkPrize" type="radio" id="lift" name="lift" value="no">
+                        <label for="lift">No</label><br>
+
+                        <h4 class="midHead1">2. 27/7 water supply ?</h4>
+                        <input class="checkPrize" type="radio" id="waterSupply" name="waterSupply" value="yes">
+                        <label for="waterSupply">Yes</label>
+                        <input class="checkPrize" type="radio" id="waterSupply" name="waterSupply" value="no">
+                        <label for="waterSupply">No</label><br>
+
+                        <h4 class="midHead1">3. Is there piped gas ?</h4>
+                        <input class="checkPrize" type="radio" id="pipedGas" name="pipedGas" value="yes">
+                        <label for="pipedGas">Yes</label>
+                        <input class="checkPrize" type="radio" id="pipedGas" name="pipedGas" value="no">
+                        <label for="pipedGas">No</label><br>
+
+                        <!-- 
+                            <input class="checkPrize" type="checkbox" id="Lift" name="Lift" value="Lift">
+                            <label for="Lift"> Lift</label><br>
+                            <input class="checkPrize" type="checkbox" id="Park" name="Park" value="Park">
+                            <label for="Park"> Park</label><br>
+                            <input class="checkPrize" type="checkbox" id="WaterStorage" name="WaterStorage" value="WaterStorage">
+                            <label for="WaterStorage"> Water Storage</label><br>
+                            <input class="checkPrize" type="checkbox" id="Intercom" name="Intercom" value="Intercom">
+                            <label for="Intercom"> Intercom Facility</label><br>
+                            <input class="checkPrize" type="checkbox" id="Security" name="Security" value="Security">
+                            <label for="Security"> Security</label><br>
+                            <input class="checkPrize" type="checkbox" id="Pool" name="Pool" value="Pool">
+                            <label for="Pool"> Swimming Pool</label><br>
+                            <input class="checkPrize" type="checkbox" id="Gym" name="Gym" value="Gym">
+                            <label for="Gym"> Fitness Center/ GYM</label><br>
+                            <input class="checkPrize" type="checkbox" id="Clubhouse" name="Clubhouse" value="Clubhouse">
+                            <label for="Clubhouse"> Clubhouse</label><br>
+                            <input class="checkPrize" type="checkbox" id="Pipedgas" name="Pipedgas" value="Pipedgas">
+                            <label for="Pipedgas"> Piped Gas</label><br>
+                            <input class="checkPrize" type="checkbox" id="Pet" name="Pet" value="Pet">
+                            <label for="Pet"> Pet Friendly</label><br>
+                            <input class="checkPrize" type="checkbox" id="Water" name="Water" value="Water">
+                            <label for="Water"> 24/7 Water Availability</label><br> -->
+                            <br>
+
+                        <h4 class="midHead">Add some more Description:</label>
+                        <textarea name="Type" id="description" name="description" cols="30" rows="10" placeholder="some keynotes about the property"></textarea>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+            <button class="submitButton" id="submitButton" type="submit">
+                Create Listing
+            </button>
+    </form>
+        <!-- <a href="#" class="listingSubmit" id="listingSubmit" >
+            <button class="submitButton" onclick="inputFields()">
+                Create Listing
+            </button>
+        </a>     -->
+    </div>
+    
+    <!-- footer of the page -->
+    <div class="footerCont">
+        <div class="footerImage">
+          <img src="img/cityLight(Transperent).png" alt="cityLight">
+        </div>
+        <footer class="footer">
+         <div class="footerContainer">
+             <ul class="footerNav">
+                 <li> <a href="Listing.html">Listing</a></li>
+                 <li> <a href="contact.html">Contact</a></li>
+                 <li> <a href="About.html">About</a></li>
+                 <li> <a href="index.html">Home</a></li>
+             </ul>
+   
+                 <div class="footer-col">
+                     <h3>Social Links</h3>
+                     <div class="social-link">
+                         <a class="social-btn" href="#">
+                             <i class="fab fa-facebook-f"></i>
+                         </a>
+                         <a class="social-btn" href="#">
+                             <i class="fab fa-twitter"></i>
+                         </a>
+                     </div>
+                 </div>
+   
+             </div>
+         <!-- <div class="rights">
+             All Rights reserved under the copyright act @2001
+         </div> -->
+     </footer>
+   </div>
+
+   <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAURuMwguym25jcUNo6UA1iGuK1YyEJ_XE",
+      authDomain: "vinodestates-1c0de.firebaseapp.com",
+      databaseURL: "https://vinodestates-1c0de.firebaseio.com",
+      projectId: "vinodestates-1c0de",
+      storageBucket: "vinodestates-1c0de.appspot.com",
+      messagingSenderId: "92575890155",
+      appId: "1:92575890155:web:4ff3ed348458e8ab021cae",
+      measurementId: "G-0173HNG3ZX"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  
+    const db = firebase.firestore();
+  
+  </script>
+  
+
+    <script src="js/listingForm.js"></script>
+
+</body>
+</html>

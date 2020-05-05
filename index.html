@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-VinodEstates</title>
+    <!-- <link rel="stylesheet" href="styles/listingForm.css"> -->
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+     -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <!-- navbar of the page -->
+    <div class="topnav" id="myTopnav">
+        <div class="logo">
+            <a href="index.html"><span>V</span>inodRealities</a>
+        </div>
+        <!-- <a href="#"><div class="userL"><i class="far fa-user"></i></div></a> -->
+        <a href="listingForm.html" class="userL"><i class="far fa-user"></i></a>
+        <br class="f">
+        <br class="f">
+        <a href="contact.html" class="navList">Contact</a>
+        <a href="#" class="navList">About</a>
+        <a href="exampleListings.html" class="navList">Listing</a>
+        <a href="index.html" class="navList active" >Home</a>    
+    
+        <a href="javascript:void(0);" style="font-size: 18px;" class="icon" onclick="myFunction()"> &#9776;</a>
+    </div>
+    <script src="js/responsiveNav.js"></script>
+
+    <!-- Main container containing search filter -->
+  <div class="mainTopContainer">
+      <div class="main1">
+        <div class="topHeading">
+          <div class="firstHeading">Find your Dream Home, at affordable prices.</div>
+          <div class="secondHeading">Get a world class service of finding a  perfect RealEstate according to your choice</div>
+        </div>
+        <div class="searchBar">
+          <input type="text" id="result" placeholder="Try some of the filters, to get started">
+          <div class="searchButtonMain">Search</div>
+        </div>
+        <!-- <div class="searchSelectOutput" id="searchSelectOutput"></div> -->
+        <div class="searchFilter">
+          <div class="filterLogo">
+            Filter 
+            <i class="fas fa-filter"></i>
+            <!-- @add Filter logo -->
+          </div>
+          <div class="filterLevel">
+            <select name="" id="" class="filterSelect" id="filterSelect1" name="typeOfProperty">
+              <option value="Residential">Residential</option>
+              <option value="Commercial">Commercial</option>
+            </select>
+            <select name="" id="" class="filterSelect" id="filterSelect2" name="typeOfPurchase">
+              <option value="Sell">Buy</option>
+              <option value="Rent">Rent</option>
+              <option value="PG">PG</option>
+            </select>
+          </div>
+          <div class="filterLevel">
+            <select name="" id="" class="filterSelect" id="filterSelect3" name="typeOfFurnishment">
+              <option value="Furnished">Furnished</option>
+              <option value="Un-Furnished">Un-Furnished</option>
+              <option value="SemiFurnished">SemiFurnished</option>
+            </select>
+            <select name="" id="" class="filterSelect" id="filterSelect4" name="typeOfBudget">
+              <option value="Budget">Budget</option>
+              <option value="<=10000">10000</option>
+              <option value="20000">20000</option>
+              <option value="30000">30000</option>
+              <option value="40000">40000</option>
+              <option value="50000">50000</option>
+              <option value="60000">60000</option>
+              <option disabled>To Buy</option>
+              <option value="5000000">50 Lac</option>
+              <option value="10000000">1Cr</option>
+              <option value="20000000">2Cr</option>
+            </select>
+          </div>
+          <div class="filterLevel">
+            <select name="" id="" class="filterSelect" id="filterSelect5" name="typeOfSize">
+              <option value="Size">Size</option>
+              <option disabled>For Residentials</option>
+              <option value="1">1 Bhk</option>
+              <option value="2">2 Bhk</option>
+              <option value="3">3 Bhk</option>
+              <option disabled>For Commercial</option>
+              <option value="250">250Sqft</option>
+              <option value="500">500Sqft</option>
+              <option value="750">750Sqft</option>
+              <option value="1000">1000Sqft</option>
+            </select>
+            <select name="" id="" class="filterSelect" id="filterSelect6" name="typeOfLocality">
+              <option value="Locality">Locality</option>
+              <option value="Vakola">Vakola</option>
+              <option value="Kalina">Kalina</option>
+              <option value="AirPort">Airport</option>
+              <option value="Military Camp">Military Camp</option>
+            </select>
+          </div>
+          <button class="applyFilter" id="applyFilter" onclick="GetSelectedText()">Apply Filter</button>
+        </div>    
+      </div>
+
+      <div class="main2">
+        <img src="img/curology-6CJg-fOTYs4-unsplash.jpg" alt="liveIn">
+      </div>
+    </div>
+
+    <!-- Container containing 3 latest listings -->
+    <div class="listTitle">Latest Properties on the Market</div>
+    <div class="listingContainer" id="listingContainer">
+      
+      
+    </div>
+
+    <!-- container containing how to use the website -->
+    <div class="howToContainer">
+        <div class="howToTitle">How to Use</div>
+        <div class="howToGuide">
+          <div class="howto">
+            <div class="travelTo">
+              <div class="titleTo">Search for Properties</div>
+              <div class="desTo">You can go on the “Listings” page and search for any property. or use the search bar above on the home page</div>
+              <a href="exampleListings.html"><div class="ListTo">Go to Listings</div></a>
+            </div>
+            <div class="travelTo">
+              <div class="titleTo">Contact the agent directly</div>
+              <div class="desTo">Search for the property you like and get a personalized meeting, to know more about the property in detail or even visit it in person.</div>
+              <a href="contact.html"><div class="ListTo">Contact Now</div></a>
+            </div>
+          </div>
+          <div class="howToImage"><img src="img/ListingSpace-1.png" alt="listingSpace"></div>
+        </div>
+    </div>
+
+     <!-- footer of the page -->
+<div class="footerCont">
+     <div class="footerImage">
+       <img src="img/footerImg.png" alt="cityLight">
+     </div>
+     <footer class="footer">
+      <div class="footerContainer">
+          <ul class="footerNav">
+              <li> <a href="Listings.html">Listing</a></li>
+              <li> <a href="contact.html">Contact</a></li>
+              <li> <a href="About.html">About</a></li>
+              <li> <a href="index.html">Home</a></li>
+          </ul>
+
+              <div class="footer-col">
+                  <h3>Social Links</h3>
+                  <div class="social-link">
+                      <a class="social-btn" href="#">
+                          <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a class="social-btn" href="#">
+                          <i class="fab fa-twitter"></i>
+                      </a>
+                  </div>
+              </div>
+
+          </div>
+      <!-- <div class="rights">
+          All Rights reserved under the copyright act @2001
+      </div> -->
+  </footer>
+</div>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAURuMwguym25jcUNo6UA1iGuK1YyEJ_XE",
+    authDomain: "vinodestates-1c0de.firebaseapp.com",
+    databaseURL: "https://vinodestates-1c0de.firebaseio.com",
+    projectId: "vinodestates-1c0de",
+    storageBucket: "vinodestates-1c0de.appspot.com",
+    messagingSenderId: "92575890155",
+    appId: "1:92575890155:web:4ff3ed348458e8ab021cae",
+    measurementId: "G-0173HNG3ZX"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  const db = firebase.firestore();
+
+</script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

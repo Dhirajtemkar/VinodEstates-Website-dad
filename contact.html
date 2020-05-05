@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-VindoEstates</title>
+    <!-- <link rel="stylesheet" href="styles/listingForm.css"> -->
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+     -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- navbar of the page -->
+    <div class="topnav" id="myTopnav">
+        <div class="logo">
+            <a href="index.html"><span>V</span>inodRealities</a>
+        </div>
+        <!-- <a href="#"><div class="userL"><i class="far fa-user"></i></div></a> -->
+        <a href="listingForm.html" class="userL"><i class="far fa-user"></i></a>
+        <br class="f">
+        <br class="f">
+        <a href="contact.html" class="navList active">Contact</a>
+        <a href="#" class="navList">About</a>
+        <a href="exampleListings.html" class="navList">Listing</a>
+        <a href="index.html" class="navList" >Home</a>    
+    
+        <a href="javascript:void(0);" style="font-size: 18px;" class="icon" onclick="myFunction()"> &#9776;</a>
+    </div>
+    <script src="js/responsiveNav.js"></script>
+
+    <div class="ContactTitle">
+        <div class="firstContactTitle">Reach To Us</div>
+        <div class="secondContactTitle">We are Happy to help</div>
+    </div>
+    <div class="infoCard">
+        <div class="topMargin1"></div>
+        <div class="infoCardTitle">Get in Touch</div>
+        <div class="infoCardInfo">
+            <div class="infoItem"><span>Name:</span> Vinod Temkar</div>
+            <div class="infoItem"><span>Phone-no.:</span> 8767809709 (Whatsapp number)</div>
+            <div class="infoItem"><span>Email-id:</span> vinodtemkar30@gmail.com</div>
+            <div class="infoItem"><span>Office:</span> House no. 69, Vakola Village, Behind Shirin Bakery, Santacruz East, Mumbai-400055.</div>
+        </div>
+    </div>
+    <div class="contactCard">
+        <div class="topMargin2"></div>
+        <div class="infoCardTitle">Want us to find you ?</div>
+        <div class="ContactForm">
+            <form action="" name="ContactForm" id="ContactForm">
+                <label for="userName">Name:</label>
+                <input type="text" id="userName" name="userName" placeholder="Type your name: eg. Vinod Temkar">
+                <br>
+                <label for="userPhone">Phone-no.:</label>
+                <input type="text" id="userPhone" name="userPhone" placeholder="Type your phone no.: eg. 8767809709">
+                <br>
+                <label for="userEmail">Email:</label>
+                <input type="text" id="userEmail" name="userEmail" placeholder="Type your email: vinodtemkar30@gmail.com">
+                <br>
+                <div class="buttonDiv"><button id="ContactSubmit" name="ContactSubmit" class="ContactSubmit">Submit</button></div>
+                
+            </form>
+            <div id="contactResponse"></div>
+        </div>
+    </div>
+
+    
+
+     <!-- footer of the page -->
+<div class="footerCont">
+    <div class="footerImage">
+      <img src="img/footerImg.png" alt="cityLight">
+    </div>
+    <footer class="footer">
+     <div class="footerContainer">
+         <ul class="footerNav">
+             <li> <a href="Listing.html">Listing</a></li>
+             <li> <a href="contact.html">Contact</a></li>
+             <li> <a href="About.html">About</a></li>
+             <li> <a href="index.html">Home</a></li>
+         </ul>
+
+             <div class="footer-col">
+                 <h3>Social Links</h3>
+                 <div class="social-link">
+                     <a class="social-btn" href="#">
+                         <i class="fab fa-facebook-f"></i>
+                     </a>
+                     <a class="social-btn" href="#">
+                         <i class="fab fa-twitter"></i>
+                     </a>
+                 </div>
+             </div>
+
+         </div>
+     <!-- <div class="rights">
+         All Rights reserved under the copyright act @2001
+     </div> -->
+ </footer>
+</div>
+
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAURuMwguym25jcUNo6UA1iGuK1YyEJ_XE",
+        authDomain: "vinodestates-1c0de.firebaseapp.com",
+        databaseURL: "https://vinodestates-1c0de.firebaseio.com",
+        projectId: "vinodestates-1c0de",
+        storageBucket: "vinodestates-1c0de.appspot.com",
+        messagingSenderId: "92575890155",
+        appId: "1:92575890155:web:4ff3ed348458e8ab021cae",
+        measurementId: "G-0173HNG3ZX"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    const db = firebase.firestore();
+
+    var inputName = document.getElementById('userName');
+    var inputPhone = document.getElementById('userPhone');
+    var inputEmail = document.getElementById('userEmail');
+
+    inputName.addEventListener('click', (e) => {
+        inputName.style.borderBottom = "3px solid green";
+    });
+    inputPhone.addEventListener('click', (e) => {
+        inputPhone.style.borderBottom = "3px solid green";
+    });
+    inputEmail.addEventListener('click', (e) => {
+        inputEmail.style.borderBottom = "3px solid green";
+    });
+
+    var ContactForm = document.getElementById('ContactForm');
+
+    ContactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        db.collection('contactUser').add({
+            contactName: ContactForm.userName.value,
+            contactPhone: ContactForm.userPhone.value,
+            contactEmail: ContactForm.userEmail.value
+        });
+        // ContactForm.userName.value = "";
+        // ContactForm.userPhone.value = "";
+        // ContactForm.userEmail.value = "";
+
+        
+    });
+    
+    var contactResponse = document.getElementById('contactResponse');
+
+    function renderContactResponse(doc) {
+        
+        var li = document.createElement('li');
+        var div1 = document.createElement('div');
+        var div2 = document.createElement('div');
+
+        li.style.listStyleType = "none";
+        li.style.width = "60%";
+        li.style.boxShadow = "-2px 2px 7px grey";
+
+        div1.textContent = doc.data().contactName;
+        div1.style.width = "100%";
+        div1.style.textAlign = "center";
+        div1.style.fontSize = "18px";
+        div1.style.fontWeight = "600";
+        div1.style.marginTop = "1vh";
+
+        div2.textContent = "Thankyou, for your response. Agent will get back to you soon!";
+        div2.style.width = "95%";
+        div2.style.fontSize = "14px";
+        div2.style.fontWeight = "450";
+        div2.style.marginBottom = "1vh";
+
+        li.appendChild(div1);
+        li.appendChild(div2);
+
+        contactResponse.appendChild(li);
+    }
+    var contactUserName = document.getElementById('userName').value;
+
+    // db.collection('contactUser').where('name','==',contactUserName).get().then((querySnapshot) => {
+    //     querySnapshot.docs.forEach(doc => {
+    //         renderContactResponse(doc);
+    //     });
+        
+    // });
+
+
+</script>
+
+
+</body>
+</html>
