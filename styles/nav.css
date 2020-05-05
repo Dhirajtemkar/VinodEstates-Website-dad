@@ -1,0 +1,166 @@
+body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  /* background-color: #0f52ba; */
+  background: linear-gradient(to right, #2c6dd5 0%, #7134bf 28%, #ff4b5a 91%, #ff4b5a 100%);
+}
+.logo {
+    float: left;
+    /* padding-bottom: 0em; */
+}
+.logo a {
+    text-decoration: none;
+
+    font-size: 1em;
+    
+    font-weight: 550;
+}
+.logo :hover {
+  color: white;
+  text-decoration: none;
+}
+.logo a span {
+    font-size: 1.5em;
+    color: white;
+}
+.topnav a {
+  float: right;
+  /* height: auto; */
+  display: block;
+  color: #f2f2f2;
+  margin-top: 0.3em;
+  text-align: center;
+  padding: 1em 1em ;
+  margin-bottom: 0em;
+  text-decoration: none;
+  margin-right: 1em;
+}
+
+.active {
+  /* background-color: #4CAF50; */
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+  /* font-size: 1.5em; */
+}
+.icon {
+    font-size: 10px;
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 0em;
+    top: -0.8em;
+}
+.icon:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+ /* background-color: #0f3f86; */
+    /* border-bottom: 2px solid white; */
+    background-color: rgba(255, 255, 255, 0.274);
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+}
+
+.navList:hover {
+    /* background-color: #0f3f86; */
+    /* border-bottom: 2px solid white; */
+    background-color: rgba(255, 255, 255, 0.274);
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+}
+
+/* 
+.topnav a:hover {
+    background-color: #0f3f86;
+    transition: 0.5s;
+} */
+.f {
+  display: none;
+}
+
+
+.userL {
+    float: right;
+    text-align: center;
+    margin-top: 0em;
+    /* border: 2px solid white; */
+    /* width: 0.6em; */
+    /* height: 0.3em; */
+    /* margin-left: 6em; */
+    /* margin-top: -0.3em; */
+    /* padding-top: 0.7em; */
+    /* margin-top: 0.5em; */
+    /* font-size: 1.3em; */
+    /* border-radius: 100px; */
+    /* box-shadow: -1px -1px 10px  #fd2c3dde; */
+    background-color: #ff4b5a;
+
+}
+.userL:hover {
+    background-color: rgba(255, 255, 255, 0.219);
+    color: white;
+    /* border: 2.7px solid #0f3f86; */
+    transition: 0.3s ease-out;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav a {
+    margin-top: 1em;  
+  }
+  .f {
+    display: inline-block;
+  }
+  .userL {
+    position: absolute;
+    right: 3em;
+    top: 0.5em;
+  }
+  .logo a, .icon {
+      margin: 0%;
+  }
+  .navList:hover {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.295);
+    border-bottom: none;
+    transition: 0.3s;
+}
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    /* transition: 0.5s;  */
+  }
+  .topnav.responsive {float: none;}
+  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    transition: 0.5s;
+  }
+
+}

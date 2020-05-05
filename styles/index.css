@@ -1,0 +1,277 @@
+
+.mainTopContainer {
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 75, 90, 0.05);
+    background: #FFF5F5;
+    /* display: flex;
+    flex-direction: row; */
+}
+.main2 {
+    display: none;
+}
+.topHeading {
+    margin: 2vh auto 3vh;
+    width: 90%;
+}
+.firstHeading {
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+.secondHeading {
+    width: 90%;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 450;
+}
+.searchBar {
+    width: 90%;
+    display: flex;
+    margin: 0vh auto;
+    /* border: 3px solid black; */
+}
+.searchBar input {
+    width: 75%;
+    height: 5vh;
+    background: rgba(255, 255, 255);
+    padding-left: 1vh;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgba(128, 128, 128, 0.513);
+    border-left: 0.5px solid black;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    border-right: 0.5px solid black;
+    border-radius: 5px 0px 0px 5px;
+}
+.searchButtonMain {
+    width: 21vh;
+    /* border-left: 1px solid black; */
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 0.5px solid black;
+    border-radius: 0px 5px 5px 0px;
+    text-align: center;
+    padding-top: 1vh;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(90deg, #2C6DD5 0%, #AC1BF0 0.01%, #FF4B5A 83.33%, #FF4B5A 100%);
+}
+.searchButtonMain:hover {
+    background: linear-gradient(90deg, rgba(255, 75, 90, 0.54) 0%, rgba(172, 27, 240, 0.83) 28.44%, #AC1BF0 90%);
+    cursor: pointer;
+}
+.searchSelectOutput {
+    width: 90%;
+    margin: 2vh auto;
+    color: black;
+    font-size: 18px;
+}
+
+.searchFilter {
+    width: 90%;
+    margin: 5vh auto;
+    /* border: 1px solid red; */
+    padding: 2vh;
+    background: linear-gradient(90deg, #2C6DD5 0%, #AC1BF0 33.33%, #FF4B5A 84.37%, #FF4B5A 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.filterLogo {
+    /* border: 2px solid black; */
+    width: 20%;
+    margin: 1vh auto 2vh;
+    color: white;
+}
+.filterLogo span {
+    font-size: 12px;
+    font-weight: 500;
+}
+.filterLevel {
+    width: 95%;
+    margin: 1vh auto;
+    /* border: 1px solid black; */
+    display: flex;
+}
+.filterLevel select {
+    min-width: 45%;
+    max-width: 40%;
+    margin: 1vh;
+    border-radius: 5px;
+    color: white;
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid white;
+}
+.filterLevel select option {
+    color: black;
+    background: rgba(255, 255, 255, 0);
+}
+
+.applyFilter {
+    width: 20vh;
+    /* background: red; */
+    border: 2px solid white;
+    color: white;
+    background: rgba(255, 255, 255, 0);
+    text-align: center;
+    /* margin: 2vh auto; */
+    cursor: pointer;
+    margin-left: 10vh;
+    /* box-shadow: -1px 1px 7px rgb(56, 56, 56); */
+}
+
+.listTitle {
+    font-size: 22px;
+    font-weight: 650;
+    text-align: center;
+    margin-top: 4vh;
+}
+.listingContainer {
+    width: 95%;
+    margin: 1vh auto;
+}
+
+
+.howToContainer {
+    width: 100%;
+    /* height: 80vh; */
+    background: #FFF5F5;
+    margin: 4vh auto;
+}
+.howToTitle {
+    font-size: 22px;
+    font-weight: 650;
+    text-align: center;
+    /* margin-top: 4vh; */
+    padding-top: 2vh;
+    /* margin-top: 3vh; */
+}
+.howToGuide {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.howto {
+    margin: 5vh 0.5vh;
+}
+.titleTo {
+    margin: 0vh 0vh 0.5vh;
+    font-weight: 600;
+    font-size: 20px;
+}
+.desTo {
+    text-align: justify;
+    font-size: 14px;
+    margin: 0 0 1vh 1vh ;
+}
+.ListTo {
+    width: 20vh;
+    height: 4vh;
+    background: linear-gradient(90deg, #2C6DD5 0%, #AC1BF0 0.01%, #FF4B5A 83.33%, #FF4B5A 100%);
+    margin: 2vh 1vh;
+    font-size: 18px;
+    color: white;
+    font-weight: 550;
+    text-align: center;
+    padding-top: 0.1vh;
+    cursor: pointer;
+}
+.howToImage {
+    margin-top: 5vh;
+}
+.ListTo a {
+    font-size: 18px;
+    /* background-color: white; */
+    font-weight: 550;
+    text-decoration: none;
+    cursor: pointer;
+}
+.ListTo:hover {
+    background-color: rgba(255, 255, 255, 0.144);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 600px) {
+    .mainTopContainer {
+        width: 100%;
+        height: 100vh;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        /* background: rgba(255, 75, 90, 0.05); */
+        /* background: url('/img/eg1.jpg') no-repeat; */
+    }   
+    .topHeading {
+        margin: 10vh auto 3vh;
+        width: 90%;
+    } 
+.searchBar {
+    width: 45%;
+    height: 5vh;
+    margin: 1vh 0 1vh 11vh ;
+}
+.searchButtonMain {
+    width: 20vh;
+    padding-top: 0.7vh;
+}
+.searchFilter {
+    width: 42%;
+    margin: 5vh 12vh;
+    padding-left: 2vh;
+}
+.applyFilter {
+    width: 20vh;
+    /* background: red; */
+    border: 2px solid white;
+    color: white;
+    background: rgba(255, 255, 255, 0);
+    text-align: center;
+    /* margin: 2vh auto; */
+    cursor: pointer;
+    margin-left: 31vh;
+    /* box-shadow: -1px 1px 7px rgb(56, 56, 56); */
+}
+.applyFilter:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.listingContainer {
+    display: flex;
+    width: 70%;
+    margin: 2vh auto;
+    border: 1px solid black;
+}
+
+.howToContainer {
+    height: 70vh;
+    padding: 0 20%;
+}
+.howToGuide {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.howto {
+    margin: 5vh 1vh;
+}
+
+.desTo {
+    text-align: justify;
+    font-size: 14px;
+    margin: 0 0 1vh 1vh ;
+}
+.ListTo {
+    height: 5vh;
+    padding-top: 0.7vh;
+}
+.howToImage {
+    margin-top: 5vh;
+}
+
+}

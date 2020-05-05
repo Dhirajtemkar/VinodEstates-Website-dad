@@ -1,0 +1,193 @@
+* {
+    font-family: Helvetica, sans-serif;
+}
+.navbar-brand {
+    color: white;
+}
+.navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.8);
+    
+}
+.navbar-toggler:hover {
+    border: 1px solid rgba(255, 255, 255, 0.377);
+}
+.navbar-toggler-icon {
+    background-color: white;
+    border: 1px solid white;
+}
+.navbar {
+    background: linear-gradient(to right, #2c6dd5 0%, #2c6dd5 28%, #7134bf 100%, #ff4b5a 100%);
+
+}
+
+.navbar-nav {
+    margin-left: 55vw;
+}
+.nav-item, active {
+    margin-right: 4vh;
+    
+}
+.nav-item a {
+    color:white;
+}
+.active {
+    padding-left: 1vh;
+    padding-right: 1vh;
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+    border: 1px solid white;
+    border-radius: 1vh;
+}
+.nav-item > a:hover {
+    color: white;
+}
+.nav-item:hover {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    border-radius: 1vh;
+    background: rgba(255, 255, 255, 0.4);
+}
+.nav-links {
+    color:white;
+}
+
+.headerMain {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    border: 1px solid black;
+}
+.searchSpace {
+    background: white;
+    margin: 5vh;
+    height: 70vh;
+    width: 50%;
+    border: 1px solid black;
+    
+}
+.carousel {
+    margin-top: 10vh;
+    margin-left: 10vh;
+    width: 65vh;
+    height: 60vh;
+    border: 1px solid black;
+    box-shadow: 2px 2px 7px black;
+}
+
+.searchToggle {
+    display: flex;
+    list-style-type: none;
+    margin: 5vh;
+}
+.Commercial-Residential {
+    margin: 1vh;
+    font: 22px black sans-serif;
+
+}
+
+.test {
+    width: 100%;
+    height: 20%;
+}
+
+.info {
+    width: 100%;
+    height: 250vh;
+}
+.statement {
+    width: 100%;
+    height: 50vh;
+    color: rgba(0, 0, 0, 0.80);
+    padding: 0%;
+}
+.statement h2 {
+    width: 100%;
+    position: absolute;
+    font-size: 25px;
+    line-height: 5vh;
+    text-align: center;
+    top: 110vh;
+}
+.statement p {
+    width: 97%;
+    position: absolute;
+    font: medium 18px sans-serif;
+    line-height: 5vh;
+    text-align: center;
+    top: 112vh;
+}
+.borderBottom {
+    position: absolute;
+    width: 50%;
+    height: 1.5 px;
+    text-align: center;
+    top: 120vh;
+    margin-bottom: 0%;
+    left: 53.5vh;
+    background: black;
+    padding: 0%;
+}
+
+.personalInfo {
+    margin-top: 0;
+    display: flex;
+    width: 99.5%;
+    height: 25%;
+    box-shadow: 1px 1px 7px black;
+}
+.abtMe {
+    width:50%;
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    padding-top: 0%;
+    line-height: 24px;
+    text-align: justify;
+    font-style: sans-serif;
+}
+.contain {
+    width: 70vh;
+}
+.tag {
+    padding-top: 12vh;
+    padding-left: 2.4vh;
+    font-size: 3.5vh;
+}
+
+.topRentals, .topBuys {
+    width: 100%;
+    height: 47vh;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+.topRentals h2, .topBuys h2 {
+    font-size: 3vh;
+    font-style: sans-serif;
+    padding-left: 5vh;
+}
+.dash {
+    width: 30vh;
+    height: 1px;
+    background: black;
+    margin-left: 5vh;
+}
+.tray {
+    width: 100%;
+    display: flex;
+    margin: 5vh;
+}
+.topchart {
+    width: 35vh;
+    height: 40vh;
+    background: linear-gradient(to right, #2c6dd5 0%, #2c6dd5 28%, #7134bf 100%, #ff4b5a 100%);
+
+    margin-left: 15vh;
+    border-radius: 2vh;
+    box-shadow: 4px 4px 7px black;
+
+}
+.topchart:hover {
+    background: linear-gradient(to right, #2c6dd5 0%, #2c6dd5 28%, #7134bf 85%, #ff4b5a 100%);
+
+}

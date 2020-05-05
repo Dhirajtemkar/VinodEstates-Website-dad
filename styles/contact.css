@@ -1,0 +1,81 @@
+.ContactTitle {
+    width: 100%;
+    padding: 2vh 0vh;
+}
+.firstContactTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+.secondContactTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.infoCard, .contactCard {
+    width: 95%;
+    margin: 2vh auto;
+    box-shadow: -2px 2px 7px grey;
+    border-radius: 10px;
+}
+.topMargin1 {
+    width: 100%;
+    height: 1vh;
+    background: #AC1BF0;
+    border-radius: 10px 10px 0 0;
+}
+.topMargin2 {
+    width: 100%;
+    height: 1vh;
+    background: #FF4B5A;
+    border-radius: 10px 10px 0 0;
+}
+.infoCardTitle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 1vh auto;
+}
+
+.infoCardInfo, .ContactForm {
+    width: 100%;
+    padding-left: 1.5vh;
+    padding-bottom: 2vh;
+}
+.infoItem {
+    font-size: 1.1em;
+    margin-bottom: 1vh;
+}
+.infoItem span {
+    font-weight: 650;
+    margin-right: 0.4vh;
+}
+.ContactForm label {
+    font-weight: 650;
+    margin-right: 0.4vh;
+    margin-bottom: 1vh;
+}
+.ContactForm input {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 60%;
+    padding-left: 1vh;
+    padding-bottom: 0.5vh;
+    margin-bottom: 1vh;
+}
+.buttonDiv {
+    width: 25%;
+    /* border: 1px solid black; */
+    margin: 1vh auto 0vh;
+}
+.ContactSubmit {
+    background: linear-gradient(to right, #7134bf 0%, #ff4b5a 91%, #ff4b5a 100%);
+    border: none;
+    height: 3vh;
+    color: white;
+    font-size: 16px;
+    padding: 0px 2vh;
+
+}
